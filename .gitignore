@@ -1,0 +1,22 @@
+# Node dependencies
+node_modules/
+
+# Composer dependencies
+vendor/
+
+# Build outputs (if you compile assets)
+dist/
+*.map
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE/project files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+*.log
