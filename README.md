@@ -1,1 +1,1 @@
-#wordpress theme
+# Ritestay wordpress theme
