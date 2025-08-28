@@ -3,6 +3,23 @@
 
 //  @package Ritestay
 
+//use RITESTAY\Inc\RITESTAY;
+
+if (! defined('RITESTAY_DIR_PATH')) {
+    define('RITESTAY_DIR_PATH', untrailingslashit(get_template_directory()));
+}
+
+require_once RITESTAY_DIR_PATH . '/inc/helpers/autoloaders.php';
+
+add_action( 'after_setup_theme', function () {
+    if ( class_exists( \RITESTAY\Inc\RITESTAY::class ) ) {
+        \RITESTAY\Inc\RITESTAY::get_instance();
+        error_log('RITESTAY booted');
+    } else {
+        error_log('RITESTAY class NOT found. Autoloader/path issue.');
+    }
+});
+
 function ritestay_enqueue_scripts()
 {
     // Registering styles
