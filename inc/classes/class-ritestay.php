@@ -1,4 +1,5 @@
 <?php
+
 /***
  *  @package Ritesite
  *  
@@ -9,16 +10,21 @@ namespace RITESTAY\Inc;
 
 use RITESTAY\Inc\Traits\Singleton;
 
-class RITESTAY{
+class RITESTAY
+{
     use Singleton;
 
     protected function __construct()
     {
         //load classes
-        $this->set_hooks();
+        Assets::get_instance(); 
+        $this->setup_hooks();
     }
 
-    protected function set_hooks(){
+    protected function setup_hooks()
+    {
+
         //actions and filters
     }
+
 }
