@@ -10,3 +10,14 @@ License: GNU General Public License v2 or later
 Text Domain: ritestay
 Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, featured-images, full-site-editing, block-patterns, rtl-language-support, sticky-post, threaded-comments, translation-ready, wide-blocks, block-styles, style-variations, accessibility-ready, blog, portfolio, news
 */
+
+.custom-logo {
+  max-height: 60px;   /* adjust height */
+  width: auto;        /* keep proportions */
+  height: auto;       /* scale nicely */
+}
+
+.custom-logo-link {
+  display: inline-flex;
+  align-items: center;
+}
