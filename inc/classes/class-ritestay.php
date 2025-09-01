@@ -18,6 +18,7 @@ class RITESTAY
     {
         //load classes
         Assets::get_instance();
+        Menus::get_instance();
         $this->setup_hooks();
     }
 
@@ -44,5 +45,30 @@ class RITESTAY
             'default-image' => '',
         );
         add_theme_support('custom-background', $args);
+        add_theme_support('post-thumbnails');
+        add_theme_support('customize-selective-refresh-widgets');
+        add_theme_support('automatic');
+        add_theme_support('automatic-feed-links');
+        add_theme_support(
+            'html5',
+            [
+                'search-form',
+                'comment-form',
+                'comment-list',
+                'gallery',
+                'caption',
+                'script',
+                'style',
+            ]
+        );
+        add_theme_support('wp-block-styles');
+        add_theme_support('align-wide');
+        add_theme_support('editor-styles');
+        add_editor_style('');
+        remove_theme_support('core-block-patterns');
+        global $content_width;
+        if (! isset($content_width)) {
+            $content_width = 1240;
+        }
     }
 }
