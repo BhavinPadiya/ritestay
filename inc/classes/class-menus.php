@@ -46,7 +46,7 @@ class Menus
     public function get_child_menu_items($menu_array, $parent_id)
     {
         $child_menu_items = [];
-        if(!empty($menu_array)&&is_array($menu_array)){
+        if (!empty($menu_array) && is_array($menu_array)) {
             foreach ($menu_array as $menu) {
                 if (intval($menu->menu_item_parent) === $parent_id) {
                     array_push($child_menu_items, $menu);
@@ -54,5 +54,33 @@ class Menus
             }
         }
         return $child_menu_items;
+    }
+
+
+    /**
+     * Get all grandchild menu items (3rd level) in the header
+     */
+    public function get_grandchild_menu_items($menu_array)
+    {
+        $grandchildren = [];
+
+        if (!empty($menu_array) && is_array($menu_array)) {
+            foreach ($menu_array as $menu) {
+                // Check if this item has a parent
+                if ($menu->menu_item_parent != 0) {
+                    // Find the parent
+                    foreach ($menu_array as $potential_parent) {
+                        if ($potential_parent->ID == $menu->menu_item_parent) {
+                            // If the parent itself has a parent → then $menu is a grandchild
+                            if ($potential_parent->menu_item_parent != 0) {
+                                $grandchildren[] = $menu;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        return $grandchildren;
     }
 }
