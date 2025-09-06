@@ -2,7 +2,9 @@
 
 get_header();
 ?>
-<div class="content">Hello world</div>
+<div class="content">
+    <?php esc_html_e('Content Blog','ritestay')?>
+</div>
 <?php
 get_footer();
 ?>
