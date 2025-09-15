@@ -7,10 +7,12 @@
 
 
 <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-    <article <?php post_class(); ?>>
-        <h2 class="entry-title"><?php the_title(); ?></h2>
-        <div class="entry-content">
-            <?php the_excerpt(); ?>
-        </div>
+    <article id="post-<?php the_ID()?>" <?php post_class('mb-5'); ?>>
+        <?php
+            get_template_part('template-parts/components/blog/entry-header');
+            get_template_part('template-parts/components/blog/entry-meta');
+            get_template_part('template-parts/components/blog/entry-content');
+            get_template_part('template-parts/components/blog/entry-footer');
+        ?>
     </article>
 </div>

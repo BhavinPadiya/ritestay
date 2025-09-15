@@ -14,6 +14,7 @@ if (! defined('RITESTAY_DIR_URI')) {
 }
 
 require_once RITESTAY_DIR_PATH . '/inc/helpers/autoloaders.php';
+require_once RITESTAY_DIR_PATH . '/inc/helpers/template-tags.php';
 
 function ritestay_get_theme_instance(){
     RITESTAY::get_instance();
