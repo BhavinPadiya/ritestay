@@ -28,16 +28,7 @@ get_header();
                         }
                         echo '<div class="row">';
                     }
-                    ?>
-                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                        <article <?php post_class(); ?>>
-                            <h2 class="entry-title"><?php the_title(); ?></h2>
-                            <div class="entry-content">
-                                <?php the_excerpt(); ?>
-                            </div>
-                        </article>
-                    </div>
-                    <?php
+                    get_template_part( 'template-parts/content' );
                     $index++;
 
                 endwhile;
@@ -49,7 +40,7 @@ get_header();
                 ?>
             </div>
         <?php else : ?>
-            <?php get_template_part( 'template-parts/content', 'none' ); ?>
+            <?php get_template_part( 'template-parts/content-none' ); ?>
         <?php endif; ?>
     </main>
 </div>
