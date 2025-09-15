@@ -8,7 +8,7 @@
 
 
 
-function get_post_custom_thumbnail($post_id, $size = 'featured-image', $attr = '')
+function get_post_custom_thumbnail($post_id, $size = 'featured-thumbnail', $attr = '')
 {
     $custom_thumbnail = '';
 
@@ -31,7 +31,7 @@ function get_post_custom_thumbnail($post_id, $size = 'featured-image', $attr = '
 }
 
 
-function the_post_custom_thumbnail($post_id, $size = 'featured-image', $attr = '')
+function the_post_custom_thumbnail($post_id, $size = 'featured-thumbnail', $attr = '')
 {
     echo get_post_custom_thumbnail($post_id, $size, $attr);
 }

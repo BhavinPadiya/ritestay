@@ -46,6 +46,7 @@ class RITESTAY
         );
         add_theme_support('custom-background', $args);
         add_theme_support('post-thumbnails');
+        add_image_size( 'featured-thumbnail', 350, 233, true );
         add_theme_support('customize-selective-refresh-widgets');
         add_theme_support('automatic');
         add_theme_support('automatic-feed-links');
