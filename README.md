@@ -18,16 +18,17 @@ Ritestay is a clean, minimal custom WordPress theme designed and developed from 
 
 Desktop screenshots show the custom menu (with dropdown), logo placement, search box, and multi-column blog grid.
 
-![Desktop Screenshot 1](localhost_mythemeproject_rooms_.png)
-![Desktop Screenshot 2](<localhost_mythemeproject_rooms_ (1).png>)
+<img src="localhost_mythemeproject_rooms_.png" alt="Desktop Screenshot 1" width="600" />
+<img src="localhost_mythemeproject_rooms_ (1).png" alt="Desktop Screenshot 2" width="600" />
 
 
 ### Mobile View
 
 Mobile screenshots highlight fully responsive navigation and layout (hamburger menu, vertical stacking).
 
-![Mobile Screenshot 1](<localhost_mythemeproject_rooms_(iPhone SE).png>)
-![Mobile Screenshot 2](<localhost_mythemeproject_rooms_(iPhone SE) (1).png>)
+
+<img src="localhost_mythemeproject_rooms_(iPhone SE).png" alt="Mobile Screenshot 1" width="300" />
+<img src="localhost_mythemeproject_rooms_(iPhone SE) (1).png" alt="Mobile Screenshot 2" width="300" />
 
 
 ## In Progress
