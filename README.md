@@ -50,4 +50,6 @@ Ritestay is a work in progress. Planned features in the next weeks:
 
 ## About the Developer
 
-This theme is developed as a portfolio project by an aspiring WordPress developer, eager to take on client work via Upwork, Fiverr, Truelancer, or direct outreach. The project demonstrates beginner-to-intermediate proficiency with WordPress theme development and a commitment to ongoing improvement.
+Ritestay was built as part of my growing portfolio in WordPress theme development. I design and develop custom themes with a focus on clean code, responsive layouts, and practical business use-cases. My goal is to help businesses and individuals showcase their services online with lightweight, extendable WordPress solutions.
+
+I’m actively taking on freelance projects through platforms like Upwork, Fiverr, and Truelancer, as well as direct client collaborations. This theme demonstrates my ability to create from scratch, customize for real needs, and continue improving based on feedback and evolving requirements.
