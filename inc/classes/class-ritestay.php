@@ -29,6 +29,7 @@ class RITESTAY
         //actions and filters
         add_action('after_setup_theme', [$this, 'setup_theme']);
     }
+    
 
     public function setup_theme()
     {
@@ -69,6 +70,7 @@ class RITESTAY
         add_theme_support('editor-styles');
         add_editor_style('');
         remove_theme_support('core-block-patterns');
+        add_image_size( 'room-card-thumb', 400, 300, true );
         global $content_width;
         if (! isset($content_width)) {
             $content_width = 1240;
