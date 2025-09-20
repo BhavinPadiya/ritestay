@@ -8,7 +8,10 @@ Ritestay is a clean, minimal custom WordPress theme designed and developed from 
 - Responsive design: seamless experience on both desktop and mobile devices.
 - Admin-driven dynamic page creation and linking.
 - Blog posts displayed in a Bootstrap-powered grid for easy, modern browsing.
-- Simple search bar included in the header.
+- Dynamic about and feedback form at footer section.
+- Rooms cards displayed in a Bootstrap-powered grid.
+- Custom Post Type: Rooms and its data can be accessed through 'ritestay core' plugin
+- Room type and individual room permalinks will be generated dynamically through 'ritestay core' CPT.
 - Minimal, clean appearance—ideal for business, hotel, or portfolio sites.
 - Screenshots provided below demonstrate desktop and mobile views.
 
@@ -36,7 +39,7 @@ Mobile screenshots highlight fully responsive navigation and layout (hamburger m
 Ritestay is a work in progress. Planned features in the next weeks:
 
 - Hotel-specific functionality (booking engine integration, room management).
-- Custom post types for rooms and bookings.
+- Further meta data integration in Rooms CPT
 - Visual/design enhancements.
 - Improved accessibility and performance.
 - Documentation for installation and customization.
@@ -46,7 +49,8 @@ Ritestay is a work in progress. Planned features in the next weeks:
 1. Clone or download the repo into your `/wp-content/themes/` directory.
 2. Activate the Ritestay theme from your WordPress admin panel.
 3. Create pages (Home, Rooms, Bookings, Blogs) and assign them to the main menu.
-4. Enjoy a lightweight, extendable starter WordPress theme fit for hospitality or portfolio showcase.
+4. Enjoy a lightweight, extendable starter WordPress theme fit for guesthouses.
+5. Download and install 'ritestay core' and 'contact form 7' plugins
 
 ## About the Developer
 
