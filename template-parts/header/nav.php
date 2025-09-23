@@ -42,10 +42,14 @@ $grandchildren = $menu_class->get_grandchild_menu_items($header_menus);
               <?php
               } else {
               ?>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="<?php echo esc_url($menu_item->url) ?>" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <?php echo esc_html($menu_item->title) ?>
-                  </a>
+                <li class="nav-item dropdown d-flex align-items-center">
+                    <a class="nav-link" href="<?php echo esc_url($menu_item->url) ?>">
+                      <?php echo esc_html($menu_item->title) ?>
+                    </a>
+                    <a class="nav-link dropdown-toggle" href="<?php echo esc_url($menu_item->url) ?>" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="padding-left: 0;">
+                      <span class="d-none d-lg-inline-block"></span>
+                    </a>
+
                   <ul class="dropdown-menu">
                     <?php
                     foreach ($child_menus as $child_menu) {

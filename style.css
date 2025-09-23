@@ -32,3 +32,26 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, feature
   left: 100%;
   margin-top: -1px;
 }
+
+/* Style for mobile view dropdown items */
+@media (max-width: 991.98px) {
+    /* Target the dropdown menu within the collapsed navbar */
+    .navbar-collapse .dropdown-menu {
+        border: none; /* Remove any border that might show up */
+        background-color: transparent; /* Make the background transparent to blend in */
+        padding-left: 1rem; /* Indent the dropdown items to separate them visually */
+    }
+    
+    /* Target the individual dropdown menu items */
+    .navbar-collapse .dropdown-item {
+        color: #6c757d; /* A subtle gray color to distinguish from the main menu items */
+        font-weight: 500; /* Use a medium font weight for readability */
+    }
+    
+    /* Add a hover/focus effect */
+    .navbar-collapse .dropdown-item:hover,
+    .navbar-collapse .dropdown-item:focus {
+        background-color: transparent;
+        color: #212529; /* Darken the text color on hover */
+    }
+}
