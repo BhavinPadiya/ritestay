@@ -23,6 +23,7 @@ Desktop screenshots show the custom menu (with dropdown), logo placement, search
 
 <img src="screenshots/localhost_mythemeproject_rooms_.png" alt="Desktop Screenshot 1" width="600" />
 <img src="screenshots/localhost_mythemeproject_rooms_ (1).png" alt="Desktop Screenshot 2" width="600" />
+<img src="screenshots/single_room_page.png" alt="Desktop Screenshot 3" width="600" />
 
 
 ### Mobile View
