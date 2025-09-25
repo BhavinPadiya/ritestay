@@ -57,3 +57,63 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // The main container that holds our booking form.
+    const bookingFormWrapper = document.querySelector('.booking-form-wrapper');
+
+    // Safely exit if this page doesn't have the booking form.
+    if (!bookingFormWrapper) {
+        return;
+    }
+    
+    // Get the site title from the localized data (defaults to a safe string if not found)
+    const siteName = (typeof ritestayData !== 'undefined' && ritestayData.siteTitle) ? ritestayData.siteTitle : 'The Accommodation';
+
+    // --- Dynamically Find the Booking Form ID (Same logic as before) ---
+    const cf7FormElement = bookingFormWrapper.querySelector('div.wpcf7');
+    let bookingFormId = null;
+
+    if (cf7FormElement) {
+        const formIdAttribute = cf7FormElement.id;
+        const match = formIdAttribute.match(/wpcf7-f(\d+)/);
+        if (match && match[1]) {
+            bookingFormId = parseInt(match[1], 10);
+        }
+    }
+    
+    if (!bookingFormId) {
+        console.error('Could not find Contact Form 7 ID. The booking confirmation will not work.');
+        return;
+    }
+
+    // Listen for the custom event fired by Contact Form 7 after a successful submission.
+    document.addEventListener('wpcf7mailsent', function(event) {
+        
+        // Check if the successful submission came from the correct Booking Form.
+        if (event.detail.contactFormId === bookingFormId) {
+            
+            console.log('Booking form submitted successfully! Displaying custom confirmation...');
+
+            // --- Custom Confirmation Content (uses Bootstrap classes and dynamic siteName) ---
+            const confirmationHTML = `
+                <div class="alert alert-success p-5 text-center" role="alert">
+                    <h4 class="alert-heading display-4 fw-bold">✅ Booking Request Sent!</h4>
+                    <p class="lead">Thank you for choosing ${siteName}. Your reservation request has been successfully received.</p>
+                    <hr>
+                    <p class="mb-0 text-muted">
+                        <strong>What happens next?</strong><br>
+                        Our team will verify the availability of your chosen room and dates. You will receive a personal confirmation email or phone call within 24 hours.
+                    </p>
+                    <p class="mt-3">
+                        <strong>Your room will be held for you, and payment will be settled upon check-in.</strong>
+                    </p>
+                </div>
+            `;
+
+            // Replace the entire form wrapper's content with the new HTML.
+            bookingFormWrapper.innerHTML = confirmationHTML;
+        }
+    }, false);
+});

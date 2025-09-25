@@ -36,10 +36,19 @@ class Assets
 
     public function register_scripts()
     {
+        $site_title = get_bloginfo('name');
         wp_register_script('main-js', RITESTAY_DIR_URI . '/assets/main.js', [], filemtime(RITESTAY_DIR_PATH . '/assets/main.js'), true);
         wp_register_script('bootstrap-js', RITESTAY_DIR_URI . '/assets/src/library/js/bootstrap.bundle.min.js', ['jquery'], false, true);
 
         wp_enqueue_script('main-js');
         wp_enqueue_script('bootstrap-js');
+        wp_enqueue_script( 'main-js', get_template_directory_uri() . '/js/main.js', array('jquery'), null, true );
+
+        // Localize the script, passing the site title to a JS object named 'ritestayData'
+    wp_localize_script( 'ritestay-main', 'ritestayData', array(
+        // We still need the bookingFormId for the JS logic to work (though it is found dynamically in JS)
+        // We can pass the site title here to be theme safe.
+        'siteTitle'   => esc_attr( $site_title )
+    ));
     }
 }
