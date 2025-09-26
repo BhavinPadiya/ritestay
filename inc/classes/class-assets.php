@@ -45,7 +45,7 @@ class Assets
         wp_enqueue_script( 'main-js', get_template_directory_uri() . '/js/main.js', array('jquery'), null, true );
 
         // Localize the script, passing the site title to a JS object named 'ritestayData'
-    wp_localize_script( 'ritestay-main', 'ritestayData', array(
+    wp_localize_script( 'main-js', 'ritestayData', array(
         // We still need the bookingFormId for the JS logic to work (though it is found dynamically in JS)
         // We can pass the site title here to be theme safe.
         'siteTitle'   => esc_attr( $site_title )
