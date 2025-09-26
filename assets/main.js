@@ -117,3 +117,39 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }, false);
 });
+
+// --- Start Date Picker Dependency Logic ---
+jQuery(document).ready(function($) {
+    
+    // 1. Get the date input fields using their CF7 names (from your form code)
+    const $checkInDate = $('input[name="check-in-date"]');
+    const $checkOutDate = $('input[name="check-out-date"]');
+
+    // Ensure both fields exist on the page before attaching events
+    if ($checkInDate.length && $checkOutDate.length) {
+
+        // Function to update the minimum date for the Check-out picker
+        function updateCheckOutMinDate() {
+            const checkInValue = $checkInDate.val();
+            
+            // Check if a valid date has been selected
+            if (checkInValue) {
+                // Set the 'min' attribute of the Check-out field to the Check-in date
+                $checkOutDate.attr('min', checkInValue);
+
+                // Optional: If the current Check-out date is before the new Check-in date, clear it.
+                if ($checkOutDate.val() && $checkOutDate.val() < checkInValue) {
+                    $checkOutDate.val('');
+                }
+            }
+        }
+
+        // 2. Attach the update function to the 'change' event of the Check-in field
+        $checkInDate.on('change', updateCheckOutMinDate);
+
+        // 3. Run the function once on load, in case the user reloads the page with dates pre-filled
+        updateCheckOutMinDate();
+    }
+
+});
+// --- End Date Picker Dependency Logic ---
