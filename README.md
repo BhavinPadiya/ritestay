@@ -4,7 +4,7 @@ Ritestay is a clean, minimal custom WordPress theme designed and developed from 
 
 ## Demo Video
 
-<iframe width="770" height="433" src="https://www.youtube.com/embed/EqnXYjgWDg8" title="Custom Wordpress Theme for Guesthouse or Hotel business- Ritestay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+[![Custom Wordpress Theme for Guesthouse or Hotel business- Ritestay](screenshot.png)](https://youtu.be/EqnXYjgWDg8?si=bdrqWrf3zzB6COLi)
 
 ## Features
 
@@ -28,5 +28,5 @@ Ritestay is a clean, minimal custom WordPress theme designed and developed from 
 
 ## About the Developer
 
-Name: Bhavin Padia
+Name: Bhavin Padia.
 Mail: bhavinpadia@duck.com
