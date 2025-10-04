@@ -19,7 +19,7 @@
                         </a>
                         <div class="card-body">
                             <h5 class="card-title"><?php the_title(); ?></h5>
-                            <?php the_content(); ?>
+                            <?php the_excerpt(); ?>
                             <a href="<?php the_permalink(); ?>" class="btn btn-primary">View Room</a>
                         </div>
                     </div>
