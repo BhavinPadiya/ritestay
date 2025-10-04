@@ -8,6 +8,10 @@
     <div class="row">
         <?php if (have_posts()) : ?>
             <?php while (have_posts()) : the_post(); ?>
+                <?php
+                $description = get_field('room_description');
+                $trimmed_description = wp_trim_words($description, 20, '...');
+                ?>
                 <div class="col-md-4">
                     <div class="card">
                         <a href="<?php the_permalink(); ?>" class="text-decoration-none text-dark">
@@ -19,7 +23,11 @@
                         </a>
                         <div class="card-body">
                             <h5 class="card-title"><?php the_title(); ?></h5>
-                            <?php the_excerpt(); ?>
+                            <?php if ($description) : ?>
+                                <div class="card-text text-muted mb-3">
+                                    <?php echo wp_kses_post($trimmed_description); ?>
+                                </div>
+                            <?php endif; ?>
                             <a href="<?php the_permalink(); ?>" class="btn btn-primary">View Room</a>
                         </div>
                     </div>
