@@ -51,14 +51,6 @@
                             </div>
                         </div>
                         <div class="card-footer bg-white border-top-0 d-flex justify-content-between align-items-center">
-                            <?php
-                            $terms = get_the_terms(get_the_ID(), 'room_type');
-                            if ($terms && ! is_wp_error($terms)) {
-                                foreach ($terms as $t) {
-                                    echo '<a href="' . esc_url(get_term_link($t)) . '" class="btn btn-sm btn-outline-secondary">' . esc_html($t->name) . '</a>';
-                                }
-                            }
-                            ?>
                             <a href="<?php the_permalink(); ?>" class="btn btn-sm btn-primary">View Room</a>
                         </div>
                     </div>
